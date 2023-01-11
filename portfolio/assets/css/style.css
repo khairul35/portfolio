@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #d6f3fb;
+    --color-base: #033f47;
+    --color-base2: #001e31;
+    --color-brand: rgb(142, 201, 243);
+    --color-brand2: #a5e6f1;
+    --sidbar-width: 240px;
+    --font-base: 'Bai Jamjuree';
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+    min-height: 250px;
+    box-shadow: -6px 6px 0 0 rgba(255, 255, 255, 0.356);
+    margin-bottom: 10px;
+}
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+.iconbox {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: black;
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1)
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: rgb(0, 11, 51);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    width: 100%;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+    background-color: rgba(149, 148, 148, 0.075);
+}
+
+
+.navbar .nav-link.active {
+    color: var(--color-brand)
+}
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.9), rgba(3, 63, 71, 0.9), url('../images/sidebar-img.jpg'));
+        background-size: cover;
+        background-position: center;
+        background-color: rgb(0, 11, 51);
+    }
+
+    .navbar-brand img {
+        border: 8px solid rgb(142, 201, 243);
+        margin-top: 50px;
+    }
+
+    /* CONTent WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+
+}
+
+/* BTN */
+
+.btn {
+    padding: 10px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    border-color: var(--color-brand2);
+}
+
+.btn-brand:hover, .btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* CONTACT */
+
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICON */
+
+.social-icon {
+
+}
+.social-icon a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
